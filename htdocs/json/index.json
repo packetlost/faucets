@@ -1,0 +1,47 @@
+{
+    "title": "Blockstrap Faucets",
+    "css": [
+        {
+            "href": "css/bootstrap.css"
+        },
+        {
+            "href": "css/faucets.css"
+        }
+    ],
+    "js": [
+        {
+            "src": "js/jquery.min.js"
+        },
+        {
+            "src": "js/bootstrap.min.js"
+        },
+        {
+            "src": "js/blockstrap/crypto.js"
+        },
+        {
+            "src": "js/blockstrap/sha3.js"
+        },
+        {
+            "src": "js/blockstrap/bitcoinjs-lib.js"
+        },
+        {
+            "src": "js/bs.options.js"
+        },
+        {
+            "src": "js/blockstrap.js"
+        },
+        {
+            "src": "js/blockstrap/api.js"
+        },
+        {
+            "src": "js/blockstrap/blockchains.js"
+        },
+        {
+            "src": "js/faucets.js"
+        }
+    ],
+    "credits": "Powered by <a href='http://blockstrap.com'>Blockstrap</a>",
+    "analytics": {
+        "google": "UA-61764833-1"
+    }
+}
