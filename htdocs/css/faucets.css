@@ -55,121 +55,73 @@ select.loading {
     background: transparent;
     border-color: firebrick;
 }
+form input.form-control, 
+form select.form-control {
+    margin: 5px 0;
+}
+.byline {
+    color: #757575;
+    padding-bottom: 30px;
+}
 
 /*
 
-UPLOAD FORM
+ICONS
 
 */
-.upload-wrapper {
+a.icon {
     display: block;
     position: relative;
-    height: 400px;
-    margin: 30px 0;
-}
-form.bs-dropzone {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #FFF;
-    border: 2px dashed firebrick;
-    border-radius: 6px;
-    padding: 30px;
-    cursor: pointer;
-}
-.upload-wrapper.mini {
-    width: 50%;
-    margin: 30px 25%;
-    height: 200px;
-}
-form.bs-dropzone:hover {
-    background: #EEE;
-}
-form.bs-dropzone.dz-drag-hover {
-    background: #DDD;
-    border-colour: 2px solid #0099CC;
-}
-.mini form.bs-dropzone.dz-drag-hover {
-    background: #FFF;
-    border: 2px solid firebrick;
-}
-.mini form.bs-dropzone {
-    background: #FFFFEE;
-    border-color: #0099CC;
-}
-.mini form.bs-dropzone:hover {
-    background: #FFFFFF;
-}
-form.bs-dropzone span.glyphicon {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-size: 100px;
-    color: #0099CC;
     text-align: center;
-    top: calc(50% - 80px);
+    text-decoration: none;
+    width: 140px;
+    height: 140px;
+    padding: 30px;
+    left: 50%;
+    margin: 0 0 70px -70px;
+    border-radius: 100px;
+    background: #FFF;
+    border: 2px solid #CCC;
 }
-form.bs-dropzone:after {
-    content: "DRAG AND DROP A FILE TO HASH IT TO THE BLOCKCHAIN";
+a.icon:before {
+    content: "";
     display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 30px;
-    bottom: 30px;
-    font-size: 15px;
-    line-height: 30px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin: -10px 0 30px -50px;
+    background: url(../img/blockchains.png) no-repeat;
+}
+a.icon.icon-ltc:before, 
+a.icon.icon-ltct:before {
+    background-position: -100px 0;
+}
+a.icon.icon-doge:before, 
+a.icon.icon-doget:before {
+    background-position: -200px 0;
+}
+a.icon.icon-dash:before, 
+a.icon.icon-dasht:before {
+    background-position: -300px 0;
+}
+a.icon:hover {
     color: #757575;
-}
-.mini form.bs-dropzone:after {
-    content: "DRAG AND DROP A FILE TO VERIFY OWNERSHIP";
-}
-form.bs-dropzone button[type="submit"]:hover {
-    color: #333;
-}
-form#save-to-blockchain .hash-cost,
-form#save-to-blockchain .annual-cost {
-    font-weight: bold;
-}
-form.bs-dropzone.loading,
-.mini form.bs-dropzone.loading {
-    background: #000 url(../img/giphy.gif) center center no-repeat;
+    background: #000;
     border-color: #AAA;
 }
-form.bs-dropzone.loading span.glyphicon,
-.mini form.bs-dropzone.loading span.glyphicon {
-    display: none;
+a.icon:hover:before {
+    background-position: 0 -100px;
 }
-    
-
-
-.dropzone-previews .dz-progress,
-.dropzone-previews .dz-success-mark,
-.dropzone-previews .dz-error-mark,
-.dropzone-previews .dz-error-message {
-    display: none;
+a.icon.icon-ltc:hover:before, 
+a.icon.icon-ltct:hover:before {
+    background-position: -100px -100px;
 }
-.dropzone-previews .dz-details {
-    margin-bottom: 10px;
+a.icon.icon-doge:hover:before, 
+a.icon.icon-doget:hover:before {
+    background-position: -200px -100px;
 }
-.dropzone-previews .dz-details img {
-    background: #EEE;
-    border: 1px solid #CCC;
-    padding: 5px;
-    margin: 5px 0;
-}
-.dropzone-previews .dz-details .filename,
-.dropzone-previews .dz-details .size {
-    margin: 5px 0;
-    color: #757575;
-}
-.dz-image img {
-    max-width: 100%;
-    height: auto;
+a.icon.icon-dash:hover:before, 
+a.icon.icon-dasht:hover:before {
+    background-position: -300px -100px;
 }

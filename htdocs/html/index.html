@@ -14,6 +14,35 @@
     
 <div class="container">
     <h1 class="logo">{{title}}</h1>
+    <h4 class="byline">{{byline}}</h4>
+    <hr>
+    <div class="row">
+        {{#chains}}
+        <div class="col-sm-3">
+            <form
+                class="request-coins"
+                method="post"
+                action=""
+                data-chain="{{chain}}"
+            >
+                <a href="{{href}}" class="icon icon-{{chain}}" target="_blank">{{name}}</a>
+                <hr>
+                <input type="email" name="email" class="form-control" placeholder="Enter email address" autocomplete="off" />
+                <div class="toggle-box" style="display: none;">
+                    <input type="password" name="code" class="form-control" placeholder="Enter access code" autocomplete="off" />
+                    <input type="text" name="address" class="form-control" placeholder="Where to send them?" autocomplete="off" />
+                </div>
+                <input type="hidden" name="return" />
+                <button type="submit" name="email" class="btn btn-success btn-block">SUBMIT</button>
+                <hr>
+                <small>
+                    <p><strong>Donation Address:</strong> <span class="address">{{address}}</span></p>
+                    <p><strong>Address Balance:</strong> <span class="balance" data-chain="{{chain}}" data-address="{{address}}">{{balance}}</span></p>
+                </small>
+            </form>
+        </div>
+        {{/chains}}
+    </div>
 </div>
     
 <div class="modal fade" id="default-modal">
@@ -32,6 +61,11 @@
             </div>
         </div>
     </div>
+</div>
+    
+<div class="container">
+    <hr>
+    {{{credits}}}
 </div>
     
 {{#js}}

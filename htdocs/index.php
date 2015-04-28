@@ -1,5 +1,5 @@
 <?php
-
+//phpinfo();
 /*
 
 BLOCKSTRAP FAUCETS
@@ -16,6 +16,7 @@ include_once($php_base.'/php/faucets.php');
 include_once($php_base.'/php/mustache.php');
 
 $faucets = new bs_faucets();
+
 $mustache = new MustachePHP();
 $html = $mustache->render($template, $options);
     

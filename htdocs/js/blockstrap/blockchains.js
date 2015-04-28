@@ -124,17 +124,24 @@
         return keys;
     }
     
-    blockchains.raw = function(return_to, privkey, inputs, outputs, this_fee, amount_to_send, data)
+    blockchains.raw = function(return_to, privkey, inputs, outputs, this_fee, amount_to_send, data, sign_tx)
     {
         tx = new bitcoin.Transaction();
+        
+        if(typeof sign_tx == 'undefined') sign_tx = true;
         
         var fee = 0;
         var balance = 0;
         var total = 0;
         var input_index = 0;
-        var key = bitcoin.ECKey.fromWIF(privkey);
+        var key = false;
         var inputs_to_sign = [];
         var debug = false;
+        
+        if(privkey)
+        {
+            key = bitcoin.ECKey.fromWIF(privkey);
+        }
         
         if(this_fee) fee = this_fee;
         if(amount_to_send) total = amount_to_send;
@@ -183,11 +190,9 @@
         }
         $.each(inputs_to_sign, function(k)
         {
-            tx.sign(k, key);
+            if(sign_tx) tx.sign(k, key);
         });
-        
         var raw = tx.toHex();
-        
         if(debug)
         {
             console.log('raw', raw);
