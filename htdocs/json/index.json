@@ -71,6 +71,9 @@
             "balance": "(fetching results)"
         }
     ],
+    "col": {
+        "css": 3
+    },
     "credits": "<small><p>Please consider donating to any of the addresses above.</p><p>Powered by <a href='http://blockstrap.com'>Blockstrap</a></p></small>",
     "analytics": {
         "google": "UA-61764833-1"
