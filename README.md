@@ -1,6 +1,8 @@
 Blockstrap Faucets
 ==================
 
+This is the source code powering the [Blockstrap Faucets](http://faucets.blockstrap.com).
+
 Need to create a config.ini file and host it at the root (parent of htdocs).
 
 It should look something like this:
@@ -37,4 +39,4 @@ ltct = mwJ9ebyT8kzaCECyUqwNU8cRj5aU8jL2op
 
 Which should result in something like this:
 
-![PREVIEW](/htdocs/img/preview.png)
+[![PREVIEW](/htdocs/img/preview.png)](http://faucets.blockstrap.com)
