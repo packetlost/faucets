@@ -61,7 +61,7 @@ var bs_faucets =
                                 var inputs = [];
                                 var outputs = [{
                                     'address': address,
-                                    'value': fee * 11
+                                    'value': fee * 10
                                 }];
                                 $.each(unspents, function(k, unspent)
                                 {
@@ -80,7 +80,7 @@ var bs_faucets =
                                     inputs, 
                                     outputs, 
                                     fee, 
-                                    fee * 11, 
+                                    fee * 10, 
                                     false,
                                     false
                                 );

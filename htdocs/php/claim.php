@@ -34,15 +34,6 @@ if(isset($_POST) && isset($_POST['tx'])) $tx = $_POST['tx'];
 
 $emails = new Mandrill($keys['mandrill']);
 
-/*
-$bitcoin = new Bitcoin('test', 'eektesting123', '127.0.0.1');
-$raw_unsigned_tx = '01000000011fb555eead147f5c6d5a565958ac8a1d3eb834f115b8b68ee42f7d5b13ee1f050100000000ffffffff03e8030000000000001976a9141fdf0e4b2c97c9afa9ebfccb6f0406e55bbe5d6688acb40c0000000000001976a914c4162517d897e521a34dc83e021503d40e79d9f588ac0000000000000000026a0000000000';
-$outputs = null;
-$keys = ['KynwwR5imwjVnGz5ibaDwSrx78j67dSywtsmjGVXow9Hwyy54mBC'];
-$bitcoin->signrawtransaction($raw_unsigned_tx, $outputs, $keys);
-$raw_tx = $bitcoin->signrawtransaction($raw_unsigned_tx, $outputs, $keys);
-*/
-
 $results = Array(
     'success' => false,
     'msg' => '<p>Valid email address required.</p>'

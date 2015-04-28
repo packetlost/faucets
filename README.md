@@ -3,7 +3,9 @@ Blockstrap Faucets
 
 This is the source code powering the [Blockstrap Faucets](http://faucets.blockstrap.com).
 
-Need to create a config.ini file and host it at the root (parent of htdocs).
+It currently requires working nodes with active rpc-ports, but does not store any coins there and is only used in order to sign the un-signed raw transactions created within the browser. This is in favour of requiring GMP-PHP.
+
+For it to work you will need to create a config.ini file and host it at the root (parent of htdocs).
 
 It should look something like this:
 
