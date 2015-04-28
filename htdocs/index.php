@@ -12,6 +12,14 @@ $php_base = dirname(__FILE__);
 $template = file_get_contents($php_base.'/html/index.html');
 $options = json_decode(file_get_contents($php_base.'/json/index.json'), true);
 
+$ini = parse_ini_file(dirname($php_base).'/config.ini', true);
+$addresses = $ini['addresses'];
+
+foreach($options['chains'] as $key => $chain)
+{
+    $options['chains'][$key]['address'] = $addresses[$chain['chain']];
+}
+
 include_once($php_base.'/php/faucets.php');
 include_once($php_base.'/php/mustache.php');
 

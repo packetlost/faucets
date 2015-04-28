@@ -46,29 +46,29 @@
             "chain": "btct",
             "name": "Bitcoin Testnet",
             "href": "http://bitcoin.org",
-            "address": "mxaFY8bG7DgH6AGe4dT3EAaTRd3NG96UHk",
-            "balance": "0.00000000"
+            "address": "N/A",
+            "balance": "(fetching results)"
         },
         {
             "chain": "dasht",
             "name": "DashPay Testnet",
             "href": "http://dashpay.io",
-            "address": "xyq7bwGUzPbSaCucM8r9LvhKZwKVfvacDU",
-            "balance": "0.00000000"
+            "address": "N/A",
+            "balance": "(fetching results)"
         },
         {
             "chain": "doget",
             "name": "Dogecoin Testnet",
             "href": "http://dogecoin.com",
-            "address": "nhY8rzwwQBVj7UkPUDsdZGFMXDCyeCd9FK",
-            "balance": "0.00000000"
+            "address": "N/A",
+            "balance": "(fetching results)"
         },
         {
             "chain": "ltct",
             "name": "Litecoin Testnet",
             "href": "http://litecoin.org",
-            "address": "mwJ9ebyT8kzaCECyUqwNU8cRj5aU8jL2op",
-            "balance": "0.00000000"
+            "address": "N/A",
+            "balance": "(fetching results)"
         }
     ],
     "credits": "<small><p>Please consider donating to any of the addresses above.</p><p>Powered by <a href='http://blockstrap.com'>Blockstrap</a></p></small>",
