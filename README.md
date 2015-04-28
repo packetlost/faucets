@@ -34,3 +34,7 @@ dasht = xyq7bwGUzPbSaCucM8r9LvhKZwKVfvacDU
 doget = nhY8rzwwQBVj7UkPUDsdZGFMXDCyeCd9FK
 ltct = mwJ9ebyT8kzaCECyUqwNU8cRj5aU8jL2op
 ```
+
+Which should result in something like this:
+
+![PREVIEW](/htdocs/img/preview.png)
