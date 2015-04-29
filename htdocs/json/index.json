@@ -38,6 +38,9 @@
             "src": "js/blockstrap/blockchains.js"
         },
         {
+            "src": "js/qrcode.js"
+        },
+        {
             "src": "js/faucets.js"
         }
     ],

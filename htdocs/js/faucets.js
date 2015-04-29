@@ -1,5 +1,19 @@
 var bs_faucets = 
 {
+    balance: function()
+    {
+        $('.balance').each(function(i)
+        {
+            var span = this;
+            var chain = $(span).attr('data-chain');
+            var address = $(span).attr('data-address');
+            $.fn.blockstrap.api.balance(address, chain, function(results)
+            {
+                var balance = (parseInt(results) / 100000000).toFixed(8);
+                $(span).text(balance);
+            });
+        });
+    },
     checks: function(timeout)
     {
         if(typeof timeout == 'undefined')
@@ -13,17 +27,8 @@ var bs_faucets =
     },
     check: function()
     {
-        $('.balance').each(function(i)
-        {
-            var span = this;
-            var chain = $(span).attr('data-chain');
-            var address = $(span).attr('data-address');
-            $.fn.blockstrap.api.balance(address, chain, function(results)
-            {
-                var balance = (parseInt(results) / 100000000).toFixed(8);
-                $(span).text(balance);
-            });
-        });
+        bs_faucets.balance();
+        bs_faucets.qrs();
     },
     claim: function()
     {
@@ -165,6 +170,26 @@ var bs_faucets =
     init: function()
     {
         bs_faucets.forms();
+    },
+    qrs: function()
+    {
+        $('.qr-modal').on('click', function(e)
+        {
+            e.preventDefault();
+            var button = this;
+            var address = $(button).attr('data-address');
+            var holder = $('#qr-modal').find('.modal-contents');
+            if($(holder).find('img').length > 0)
+            {
+                $(holder).find('img').remove();
+            }
+            $(holder).qrcode({
+                render: 'image',
+                text: address
+            });
+            $(holder).parent().find('.qr-address').html('<strong>Address:</strong> '+address);
+            $.fn.blockstrap.core.modal('QR Code', false, 'qr-modal');
+        });
     }
 };
 
