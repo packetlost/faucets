@@ -37,6 +37,13 @@ btct = mxaFY8bG7DgH6AGe4dT3EAaTRd3NG96UHk
 dasht = xyq7bwGUzPbSaCucM8r9LvhKZwKVfvacDU
 doget = nhY8rzwwQBVj7UkPUDsdZGFMXDCyeCd9FK
 ltct = mwJ9ebyT8kzaCECyUqwNU8cRj5aU8jL2op
+
+[codes]
+lifetime = 10
+daily = 2
+weekly = 4
+monthly = 6
+whitelist = admin@your-domain.com, admin@your-friends-domain.com
 ```
 
 Which should result in something like this:
