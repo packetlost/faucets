@@ -64,10 +64,7 @@ var bs_faucets =
                                 var fee = $.fn.blockstrap.settings.blockchains[chain].fee * 100000000;
 
                                 var inputs = [];
-                                var outputs = [{
-                                    'address': address,
-                                    'value': fee * 10
-                                }];
+                                var available_balance = 0;
                                 $.each(unspents, function(k, unspent)
                                 {
                                     inputs.push({
@@ -76,8 +73,34 @@ var bs_faucets =
                                         script: unspent.script,
                                         value: unspent.value,
                                     });
-                                    //available_balance = available_balance + unspent.value;
+                                    available_balance = available_balance + unspent.value;
                                 });
+                                
+                                var amount_to_send = fee * 2;
+                                if(available_balance > (10000 * fee))
+                                {
+                                    amount_to_send = (Math.floor(Math.random() * 100) + 10) * fee
+                                }
+                                else if(available_balance > (1000 * fee))
+                                {
+                                    amount_to_send = (Math.floor(Math.random() * 50) + 10) * fee
+                                }
+                                else if(available_balance > (100 * fee))
+                                {
+                                    amount_to_send = (Math.floor(Math.random() * 20) + 10) * fee
+                                }
+                                else if(available_balance > (50 * fee))
+                                {
+                                    amount_to_send = (Math.floor(Math.random() * 10) + 5) * fee
+                                }
+                                else if(available_balance > (20 * fee))
+                                {
+                                    amount_to_send = (Math.floor(Math.random() * 10) + 2) * fee
+                                }
+                                var outputs = [{
+                                    'address': address,
+                                    'value': amount_to_send
+                                }];
 
                                 var tx = $.fn.blockstrap.blockchains.raw(
                                     return_address, 
@@ -85,14 +108,14 @@ var bs_faucets =
                                     inputs, 
                                     outputs, 
                                     fee, 
-                                    fee * 10, 
+                                    amount_to_send, 
                                     false,
                                     false
                                 );
                                 
                                 $.ajax({
                                     url: 'php/claim.php',
-                                    data: {email: email, chain: chain, code: code, address: address, tx: tx},
+                                    data: {email: email, chain: chain, code: code, address: address, tx: tx, sent: amount_to_send},
                                     dataType: 'json',
                                     method: 'post',
                                     success: function(results)
