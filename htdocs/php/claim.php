@@ -34,7 +34,7 @@ $sent = false;
 if(isset($_POST) && isset($_POST['email'])) $email = $_POST['email'];
 if(isset($_POST) && isset($_POST['chain'])) $chain = $_POST['chain'];
 if(isset($_POST) && isset($_POST['code'])) $code = $_POST['code'];
-if(isset($_POST) && isset($_POST['address'])) $address = $_POST['address'];
+if(isset($_POST) && isset($_POST['address'])) $address = $_POST[''];
 if(isset($_POST) && isset($_POST['sent'])) $sent = $_POST['sent'];
 if(isset($_POST) && isset($_POST['tx'])) $tx = $_POST['tx'];
 

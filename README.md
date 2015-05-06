@@ -27,6 +27,24 @@ doget = ADD_YOUR_PORT_HERE
 dasht = ADD_YOUR_PORT_HERE
 ltct = ADD_YOUR_PORT_HERE
 
+[usernames]
+btct = ADD_YOUR_RPC_USERNAME_HERE
+doget = ADD_YOUR_RPC_USERNAME_HERE
+dasht = ADD_YOUR_RPC_USERNAME_HERE
+ltct = ADD_YOUR_RPC_USERNAME_HERE
+
+[passwords]
+btct = ADD_YOUR_RPC_PASSWORD_HERE
+doget = ADD_YOUR_RPC_PASSWORD_HERE
+dasht = ADD_YOUR_RPC_PASSWORD_HERE
+ltct = ADD_YOUR_RPC_PASSWORD_HERE
+
+[hosts]
+btct = 127.0.0.1
+doget = 127.0.0.1
+dasht = 127.0.0.1
+ltct = 127.0.0.1
+
 [app]
 name = Blockstrap
 email = founders@blockstrap.com
