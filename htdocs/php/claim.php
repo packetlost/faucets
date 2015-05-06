@@ -19,6 +19,9 @@ $salts = $ini['salts'];
 $keys = $ini['keys'];
 $app = $ini['app'];
 $ports = $ini['ports'];
+$usernames = $ini['usernames'];
+$passwords = $ini['passwords'];
+$hosts = $ini['hosts'];
 $codes = $ini['codes'];
 $addresses = $ini['addresses'];
 $email = false;
@@ -131,7 +134,7 @@ if(isset($salts['emails']) && $email && filter_var($email, FILTER_VALIDATE_EMAIL
             {
                 try
                 {
-                    $bitcoin = new Bitcoin('test', 'eektesting123', '127.0.0.1', $ports[$chain]);
+                    $bitcoin = new Bitcoin($usernames[$chain], $passwords[$chain], $hosts[$chain], $ports[$chain]);
                     $outputs = null;
                     $keys = [$keys[$chain]];
                     $raw_tx_results = $bitcoin->signrawtransaction($tx, $outputs, $keys);
