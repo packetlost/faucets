@@ -77,7 +77,7 @@
     "col": {
         "css": 3
     },
-    "credits": "<small><p>Please consider donating to any of the addresses above.</p><p>Powered by <a href='http://blockstrap.com'>Blockstrap</a></p></small>",
+    "credits": "<small><p>Please consider donating to any of the addresses above.</p><p>Powered by <a href='http://blockstrap.com'>Blockstrap</a> | View <a href='https://github.com/blockstrap/faucets'>Source Code</a></p></small>",
     "analytics": {
         "google": "UA-55832346-1"
     }
