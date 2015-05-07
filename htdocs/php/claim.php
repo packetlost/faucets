@@ -146,7 +146,7 @@ if(isset($salts['emails']) && $email && filter_var($email, FILTER_VALIDATE_EMAIL
                         {
                             $results['success'] = true;
                             $results['txid'] = $txid;
-                            $results['msg'] = '<p>Successfully sent '.(($amount_to_send + $fee) / 100000000).' coins to '.$address.'</p>';
+                            $results['msg'] = '<p>Successfully sent '.($amount_to_send / 100000000).' coins to '.$address.'</p>';
                             $bc_chain = $chain;
                             if($bc_chain == 'doget') $bc_chain = 'dogt';
                             if($bc_chain == 'dasht') $bc_chain = 'drkt';
