@@ -189,7 +189,7 @@ if(isset($salts['emails']) && $email && filter_var($email, FILTER_VALIDATE_EMAIL
         }
         else
         {
-            $results['msg'] = '<p>Sorry, but this faucet does not have enough funds so cannot send you any.</p><p>Please try again shortly as we may have had a donation since then.</p>';
+            $results['msg'] = '<p>Sorry, but this faucet does not have enough funds.</p><p>Please try again shortly as we may have had a donation since then.</p><p>If you would like to notify us of this problem please contact us at support@blockstrap.com or reach out to us on Twitter @blockstrap</p>';
         }
     }
     else
@@ -211,7 +211,7 @@ else if(isset($salts['emails']) && $email && filter_var($email, FILTER_VALIDATE_
     $claim_code = substr($activation_code, 0, 6);
     $results['return_address'] = $addresses[$chain];
     $results['msg'] = '<p>Email address has been hashed.</p>';
-    $email_contents = '<p>Thanks for signing-up to our faucets!</p><p>Your claim code is <strong>'.$claim_code.'</strong></p><p>It will remain valid until the next hour passes.</p><p>Kind regards;</p><p>Team Blockstrap</p>';
+    $email_contents = '<p>Thanks for signing-up to Blockstrap faucets!</p><p>Your claim code is <strong>'.$claim_code.'</strong></p><p>It will remain valid for the next 60 minutes.</p><p>Kind regards;</p><p>Team Blockstrap</p>';
     try
     {
         $message = array(
