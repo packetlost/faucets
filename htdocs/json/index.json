@@ -80,7 +80,7 @@
     "col": {
         "css": 3
     },
-    "credits": "<small><p>Please consider donating to any of the addresses above.</p><p>This Example Application is Powered by <a href='http://blockstrap.com'>Blockstrap</a> | View <a href='https://github.com/blockstrap/faucets'>Source Code</a></p></small>",
+    "credits": "<b><small><p>Please help us keep a steady supply of faucets and consider donating to any of the addresses above.</p><p>This application is powered by <a href='http://blockstrap.com'>Blockstrap</a> | View <a href='https://github.com/blockstrap/faucets'>Faucets Source Code</a></p></small></b>",
     "analytics": {
         "google": "UA-55832346-1"
     }
